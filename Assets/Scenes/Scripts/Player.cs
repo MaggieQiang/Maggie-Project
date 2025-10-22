@@ -8,25 +8,36 @@ public class Player : MonoBehaviour
     float movementX;
     float movementY;
     [SerializeField] float speed = 6f;
-    [SerializeField] Rigidbody2D rb;
     [SerializeField] float jumpPower = 5f;
+    
+    [SerializeField] Rigidbody2D rb;
+
+
 
     bool jumping = false;
 
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
+
+    private int coinScore;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent <Animator>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         animator.SetBool("walking", movementX != 0f);
-
+        if (rb.linearVelocityX != 0)
+        {
+            spriteRenderer.flipX = (rb.linearVelocityX < 0f);
+        }
     }
 
     void OnMove(InputValue value)
@@ -37,6 +48,14 @@ public class Player : MonoBehaviour
         movementY = v.y; //In 2D we don't need to worry about Y
 
         Debug.Log(v);
+
+        // bool facingRight = true;
+
+        // facingRight = v.x > 0f;
+        // if (spriteRenderer.flipX == facingRight)
+        // {
+        //     spriteRenderer.flipX =! facingRight;
+        // }
     }
 
     void OnJump()
@@ -80,5 +99,9 @@ public class Player : MonoBehaviour
         }
     }
     
-
+    public void AddCoin(int value)
+    {
+        coinScore += value;
+        Debug.Log(value);
+    }
 }
