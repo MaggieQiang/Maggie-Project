@@ -28,7 +28,7 @@
                     "name": "Attack",
                     "type": "Button",
                     "id": "6c2ab1b8-8984-453a-af3d-a3c78ae1679a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -90,7 +90,7 @@
             ],
             "bindings": [
                 {
-                    "name": "WASD",
+                    "name": "Arrow",
                     "id": "8412d52a-e14b-446b-9d70-43cf8195a823",
                     "path": "2DVector",
                     "interactions": "",
@@ -103,7 +103,7 @@
                 {
                     "name": "up",
                     "id": "cebf1cef-43c0-4bcd-abc8-13660bcccc30",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -114,7 +114,7 @@
                 {
                     "name": "down",
                     "id": "8d8c7014-9f4e-4af4-8741-e70de39fbbad",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -125,7 +125,7 @@
                 {
                     "name": "left",
                     "id": "68f67b6a-d17f-4ed1-9dc6-cca2398b8213",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -136,7 +136,7 @@
                 {
                     "name": "right",
                     "id": "a6b13b1a-c436-455d-824b-0f77b32f4b99",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",

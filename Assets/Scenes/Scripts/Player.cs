@@ -1,7 +1,9 @@
+using TMPro;
 using UnityEditor.Animations;
 using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class Player : MonoBehaviour
 {
@@ -9,7 +11,7 @@ public class Player : MonoBehaviour
     float movementY;
     [SerializeField] float speed = 6f;
     [SerializeField] float jumpPower = 5f;
-    
+    [SerializeField] TextMeshProUGUI coinText;
     [SerializeField] Rigidbody2D rb;
 
 
@@ -103,5 +105,7 @@ public class Player : MonoBehaviour
     {
         coinScore += value;
         Debug.Log(value);
+
+        coinText.text = "Coins:" + coinScore.ToString();
     }
 }
