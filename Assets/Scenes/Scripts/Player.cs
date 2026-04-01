@@ -47,17 +47,7 @@ public class Player : MonoBehaviour
         Vector2 v = value.Get<Vector2>();
 
         movementX = v.x;
-        movementY = v.y; //In 2D we don't need to worry about Y
-
-        Debug.Log(v);
-
-        // bool facingRight = true;
-
-        // facingRight = v.x > 0f;
-        // if (spriteRenderer.flipX == facingRight)
-        // {
-        //     spriteRenderer.flipX =! facingRight;
-        // }
+        // movementY = v.y; //In 2D we don't need to worry about Y
     }
 
     void OnJump()
